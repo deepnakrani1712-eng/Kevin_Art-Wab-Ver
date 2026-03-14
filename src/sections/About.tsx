@@ -158,6 +158,13 @@ const About = () => {
               />
               {/* Overlay Card */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6">
+                <div className="mb-4">
+                  <img
+                    src="/images/logo.png"
+                    alt="ArthX Logo"
+                    className="h-6 w-auto object-contain"
+                  />
+                </div>
                 <p className="text-micro text-arthx-steel/60 mb-2">
                   COMPANY REGISTRATION
                 </p>
