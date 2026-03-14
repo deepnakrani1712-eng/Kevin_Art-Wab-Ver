@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -93,6 +94,7 @@ function App() {
 
       {/* Footer */}
       <Footer />
+      <Analytics />
     </div>
   );
 }
