@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ArthX Premium Industrial Color System */
+    --background: 220 14% 97%;
+    --foreground: 216 35% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 216 35% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 35% 10%;
+    --primary: 213 55% 16%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 18% 23%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 10% 90%;
+    --muted-foreground: 210 10% 45%;
+    --accent: 220 12% 80%;
+    --accent-foreground: 216 35% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 10% 85%;
+    --input: 220 10% 85%;
+    --ring: 220 100% 58%;
+    --radius: 0.375rem;
+    
+    /* Custom ArthX Colors */
+    --arthx-blue: 213 55% 16%;
+    --arthx-steel: 210 18% 23%;
+    --arthx-silver: 220 12% 80%;
+    --arthx-light: 220 14% 97%;
+    --arthx-dark: 220 20% 8%;
+    --arthx-accent: 220 100% 58%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 220 14% 97%;
+    --card: 220 18% 12%;
+    --card-foreground: 220 14% 97%;
+    --popover: 220 18% 12%;
+    --popover-foreground: 220 14% 97%;
+    --primary: 220 14% 97%;
+    --primary-foreground: 220 20% 8%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 220 14% 97%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 220 15% 18%;
+    --accent-foreground: 220 14% 97%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 220 100% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Premium Button Styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-[#0F2744] text-white font-medium text-sm tracking-wide transition-all duration-300;
+    border-radius: 6px;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-[#0A1B30] transform -translate-y-0.5;
+    box-shadow: 0 10px 30px rgba(15, 39, 68, 0.25);
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-[#0F2744] text-[#0F2744] font-medium text-sm tracking-wide transition-all duration-300 bg-transparent;
+    border-radius: 6px;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-[#0F2744] text-white transform -translate-y-0.5;
+  }
+  
+  /* Section Container */
+  .section-container {
+    @apply w-full px-6 sm:px-8 lg:px-16 xl:px-24;
+  }
+  
+  /* Grain Overlay */
+  .grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+  
+  /* Vertical Rules (Frame) */
+  .vertical-rule {
+    @apply fixed top-0 w-px h-full bg-[#0F2744] pointer-events-none z-50;
+    opacity: 0.1;
+  }
+  
+  /* Typography Scale */
+  .text-hero {
+    font-size: clamp(44px, 6vw, 84px);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+  
+  .text-section {
+    font-size: clamp(36px, 4.8vw, 64px);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  .text-subheading {
+    font-size: clamp(18px, 1.6vw, 22px);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  
+  .text-body {
+    font-size: clamp(14px, 1.1vw, 16px);
+    line-height: 1.65;
+    font-weight: 400;
+  }
+  
+  .text-micro {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  /* Card Hover Effect */
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .card-hover:hover {
+    @apply transform -translate-y-1;
+    box-shadow: 0 20px 40px rgba(11, 15, 23, 0.12);
+  }
+  
+  /* Image Treatment */
+  .img-industrial {
+    filter: contrast(1.05) saturate(0.85);
+  }
+  
+  /* Navigation Scroll State */
+  .nav-scrolled {
+    @apply bg-white/95 backdrop-blur-md shadow-sm;
+  }
+  
+  /* Smooth Section Transitions */
+  .section-pinned {
+    @apply w-screen h-screen relative overflow-hidden;
+  }
+  
+  /* Accent Gradient */
+  .accent-gradient {
+    background: linear-gradient(135deg, #C8CDD2, #8E9AA6);
+  }
+}
+
+@layer utilities {
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  /* Stagger Delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+}
