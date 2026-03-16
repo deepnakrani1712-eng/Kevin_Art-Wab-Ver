@@ -108,14 +108,37 @@ const Contact = () => {
     return () => ctx.revert();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', company: '', message: '' });
-    }, 3000);
+    
+    // Google Apps Script Web App URL
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwlUBRJJQNP1skOmU6YvAbSV9qb3dwtNq11xsOE6VFdgHuM8aPjfZ_CY1Yw0vX-2ZI2zA/exec";
+
+    try {
+      // Show "Sending..." state or similar if needed, but we'll stick to the current logic
+      // Note: We use 'no-cors' because Google Script redirects can cause CORS errors in some environments
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Show success state
+      setIsSubmitted(true);
+      
+      // Reset form after a delay
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: '', email: '', company: '', message: '' });
+      }, 3000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // In a real app we might use a toast here
+      alert('There was an error sending your message. Please try again.');
+    }
   };
 
   const handleChange = (
