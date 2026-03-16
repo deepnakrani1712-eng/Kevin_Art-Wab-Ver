@@ -51,14 +51,14 @@ const Footer = () => {
                 <Linkedin size={16} />
               </a>
               <a
-                href="mailto:info@arthx.com"
+                href="mailto:info@arthxglobal.com"
                 className="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center hover:bg-arthx-blue transition-colors"
                 aria-label="Email"
               >
                 <Mail size={16} />
               </a>
               <a
-                href="tel:+919824037485"
+                href="tel:+919712824812"
                 className="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center hover:bg-arthx-blue transition-colors"
                 aria-label="Phone"
               >
@@ -93,19 +93,25 @@ const Footer = () => {
             <h4 className="font-semibold text-white mb-4 text-sm">Contact</h4>
             <address className="not-italic text-arthx-silver/70 text-xs leading-relaxed space-y-2">
               <p>
-                606 BLUE POINT, SARTHANA JAKATNAKA,
+                606 Blue Point, Sarthana Jakatnaka,
                 <br />
                 SURAT - 395006, GUJARAT - INDIA
               </p>
+
               <div className="space-y-1">
                 <p>
-                  <a href="tel:+919824037485" className="hover:text-white transition-colors">
-                    +91 98240 37485
+                  <a href="tel:+919712824812" className="hover:text-white transition-colors">
+                    +91 97128 24812
                   </a>
                 </p>
                 <p>
-                  <a href="mailto:info@arthx.com" className="hover:text-white transition-colors">
-                    info@arthx.com
+                  <a href="tel:+4917642073781" className="hover:text-white transition-colors">
+                    +49 176 42073781
+                  </a>
+                </p>
+                <p>
+                  <a href="mailto:info@arthxglobal.com" className="hover:text-white transition-colors">
+                    info@arthxglobal.com
                   </a>
                 </p>
               </div>

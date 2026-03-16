@@ -19,7 +19,6 @@ const Navigation = () => {
     { name: 'About', href: '#about' },
     { name: 'Products', href: '#products' },
     { name: 'Industries', href: '#industries' },
-    { name: 'Certifications', href: '#certifications' },
     { name: 'Global Trade', href: '#global-trade' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -35,11 +34,10 @@ const Navigation = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-sm'
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-sm'
+          : 'bg-transparent'
+          }`}
         style={{ height: '80px' }}
       >
         <div className="w-full h-full px-6 sm:px-8 lg:px-16 xl:px-24 flex items-center justify-between">
@@ -52,9 +50,9 @@ const Navigation = () => {
             }}
             className="flex items-center"
           >
-            <img 
-              src="/images/logo.png" 
-              alt="ArthX Logo" 
+            <img
+              src="/images/logo.png"
+              alt="ArthX Logo"
               className="h-10 md:h-12 w-auto object-contain"
             />
           </a>
@@ -104,18 +102,16 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
+        className={`fixed inset-0 z-40 lg:hidden transition-all duration-500 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
       >
         <div
           className="absolute inset-0 bg-black/20 backdrop-blur-sm"
           onClick={() => setIsMobileMenuOpen(false)}
         />
         <div
-          className={`absolute top-20 left-0 right-0 bg-white shadow-lg transition-transform duration-500 ${
-            isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
-          }`}
+          className={`absolute top-20 left-0 right-0 bg-white shadow-lg transition-transform duration-500 ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+            }`}
         >
           <div className="px-6 py-8 flex flex-col gap-4">
             {navLinks.map((link) => (

@@ -12,6 +12,7 @@ import GlobalTrade from './sections/GlobalTrade';
 import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
+import WhatsAppButton from './components/custom/WhatsAppButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,10 +75,6 @@ function App() {
       {/* Grain Overlay */}
       <div className="grain-overlay" />
 
-      {/* Vertical Rules (Frame) */}
-      <div className="vertical-rule" style={{ left: '6vw' }} />
-      <div className="vertical-rule" style={{ left: '94vw' }} />
-
       {/* Navigation */}
       <Navigation />
 
@@ -94,6 +91,7 @@ function App() {
 
       {/* Footer */}
       <Footer />
+      <WhatsAppButton />
       <Analytics />
     </div>
   );

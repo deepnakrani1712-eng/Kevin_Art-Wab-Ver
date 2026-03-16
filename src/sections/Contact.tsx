@@ -137,7 +137,7 @@ const Contact = () => {
             GET IN TOUCH
           </span>
           <h2 className="text-section text-arthx-blue mb-6">
-            Let’s Handle Your Next Shipment
+            Global Sourcing, Seamless Delivery
           </h2>
           <p className="text-subheading text-arthx-steel/70 max-w-2xl mx-auto">
             Tell us what you need. We'll reply with grades, availability, and
@@ -267,13 +267,13 @@ const Contact = () => {
                     Office Address
                   </h4>
                   <address className="not-italic text-arthx-steel/70 leading-relaxed">
-                    606 BLUE POINT
+                    606 Blue Point
                     <br />
-                    SARTHANA JAKATNAKA
+                    Sarthana Jakatnaka
                     <br />
-                    SURAT - 395006
+                    Surat - 395006
                     <br />
-                    GUJARAT - INDIA
+                    Gujarat - India
                   </address>
                 </div>
               </div>
@@ -290,12 +290,20 @@ const Contact = () => {
                     <span className="text-micro text-arthx-steel/60 block mb-1">
                       Phone
                     </span>
-                    <a
-                      href="tel:+919824037485"
-                      className="text-arthx-blue font-medium hover:underline"
-                    >
-                      +91 98249 37485
-                    </a>
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href="tel:+919712824812"
+                        className="text-arthx-blue font-medium hover:underline"
+                      >
+                        +91 97128 24812
+                      </a>
+                      <a
+                        href="tel:+4917642073781"
+                        className="text-arthx-blue font-medium hover:underline"
+                      >
+                        +49 176 42073781
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -307,12 +315,20 @@ const Contact = () => {
                     <span className="text-micro text-arthx-steel/60 block mb-1">
                       Email
                     </span>
-                    <a
-                      href="mailto:info@arthx.com"
-                      className="text-arthx-blue font-medium hover:underline"
-                    >
-                      info@arthx.com
-                    </a>
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href="mailto:info@arthxglobal.com"
+                        className="text-arthx-blue font-medium hover:underline"
+                      >
+                        info@arthxglobal.com
+                      </a>
+                      <a
+                        href="mailto:dharmik.savaliya@arthxglobal.com"
+                        className="text-arthx-blue font-medium hover:underline"
+                      >
+                        dharmik.savaliya@arthxglobal.com
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

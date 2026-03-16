@@ -98,10 +98,6 @@ const Certifications = () => {
       id="certifications"
       className="w-full bg-white py-24 lg:py-32 z-30 relative overflow-hidden"
     >
-      {/* Decorative vertical rule */}
-      <div className="vertical-rule left-[10%] opacity-[0.03]" />
-      <div className="vertical-rule right-[10%] opacity-[0.03]" />
-
       <div className="section-container relative">
         <div className="cert-header mb-16 lg:mb-20 max-w-2xl">
           <span className="text-micro text-arthx-blue mb-4 block">COMPLIANCE & TRUST</span>

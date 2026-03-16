@@ -137,15 +137,7 @@ const About = () => {
               a reputation for excellence in the scrap metal trading industry.
             </p>
 
-            {/* CIN Display */}
-            <div className="bg-arthx-blue/5 border-l-4 border-arthx-blue p-4 mb-8">
-              <span className="text-micro text-arthx-steel/60 block mb-1">
-                Corporate Identification Number
-              </span>
-              <span className="font-mono text-arthx-blue font-medium">
-                U46900GJ2026OPC173271
-              </span>
-            </div>
+
           </div>
 
           {/* Right Image */}
@@ -156,25 +148,7 @@ const About = () => {
                 alt="Metal scrap materials"
                 className="w-full h-full object-cover img-industrial"
               />
-              {/* Overlay Card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-6">
-                <div className="mb-4">
-                  <img
-                    src="/images/logo.png"
-                    alt="ArthX Logo"
-                    className="h-6 w-auto object-contain"
-                  />
-                </div>
-                <p className="text-micro text-arthx-steel/60 mb-2">
-                  COMPANY REGISTRATION
-                </p>
-                <p className="text-arthx-blue font-semibold">
-                  ArthX (OPC) Private Limited
-                </p>
-                <p className="text-sm text-arthx-steel/70 mt-1">
-                  Surat, Gujarat, India
-                </p>
-              </div>
+
             </div>
           </div>
         </div>
